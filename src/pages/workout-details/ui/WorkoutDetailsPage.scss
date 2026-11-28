@@ -1,0 +1,59 @@
+.workout-details {
+  &__back {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #777782;
+    text-decoration: none;
+
+    &:hover {
+      color: #252525;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 40px;
+    align-items: start;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e9e9ed;
+    border-radius: 16px;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  &__info {
+    h1 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    h2 {
+      margin: 24px 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      color: #777782;
+      line-height: 1.6;
+    }
+  }
+
+  &__description {
+    color: #555;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 700px) {
+  .workout-details__content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}

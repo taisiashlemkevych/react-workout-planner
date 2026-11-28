@@ -34,3 +34,11 @@ export function useWorkoutEquipment() {
     staleTime: 10 * 60 * 1000,
   });
 }
+
+export function useWorkoutById(id: number) {
+  return useQuery({
+    queryKey: ['workout', id],
+    queryFn: () => workoutRepository.getExerciseById(id),
+    enabled: Number.isInteger(id) && id > 0,
+  });
+}

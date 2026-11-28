@@ -4,6 +4,7 @@ import DashboardPage from '../../pages/dashboard/ui/DashboardPage';
 import WorkoutsPage from '../../pages/workouts/ui/WorkoutsPage';
 import MyPlanPage from '../../pages/my-plan/ui/MyPlanPage';
 import HistoryPage from '../../pages/history/ui/HistoryPage';
+import WorkoutDetailsPage from '../../pages/workout-details/ui/WorkoutDetailsPage';
 
 function AppRouter() {
   return (
@@ -14,6 +15,7 @@ function AppRouter() {
           <Route path="/workouts" element={<WorkoutsPage />} />
           <Route path="/my-plan" element={<MyPlanPage />} />
           <Route path="/history" element={<HistoryPage />} />
+          <Route path="/workouts/:id" element={<WorkoutDetailsPage />} />
         </Route>
 
         <Route

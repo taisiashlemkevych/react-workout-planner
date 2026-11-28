@@ -1,80 +1,108 @@
+.workout-card__link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
 .workout-card {
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid #e9e9ed;
-  border-radius: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(30, 35, 50, 0.08);
-  }
-
-  &__image-wrapper {
-    height: 190px;
-    overflow: hidden;
-    background: #f0f1f4;
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__image-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: #858590;
-    font-size: 13px;
-  }
-
-  &__content {
-    padding: 20px;
-  }
-
-  &__category {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #6c70a6;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  &__title {
-    margin: 0 0 10px;
-    color: #252535;
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-  &__description {
-    display: -webkit-box;
-    overflow: hidden;
-    min-height: 42px;
-    margin: 0 0 18px;
-    color: #777782;
-    font-size: 13px;
-    line-height: 1.6;
-    -webkit-box-orient: vertical;
-  }
-
-  &__meta {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-top: 14px;
-    border-top: 1px solid #eeeeF2;
-    color: #777782;
-    font-size: 12px;
-    line-height: 1.5;
+    height: 440px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e5e5eb;
+    border-radius: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    strong {
-      color: #444451;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
     }
-  }
+
+    &__image-wrapper {
+        flex: 0 0 180px;
+        height: 180px;
+        overflow: hidden;
+        background: #f0f0f2;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-height: 0;
+        padding: 18px 22px;
+    }
+
+    &__title {
+        flex: 0 0 auto;
+        margin: 0 0 10px;
+        color: #252535;
+        font-size: 19px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    &__description {
+        display: -webkit-box;
+        flex: 0 0 7.5em;
+        height: 7.5em;
+        overflow: hidden;
+        margin: 0 0 14px;
+        color: #777782;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        gap: 10px;
+        margin-top: auto;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    &__label {
+        color: #252525;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    &__value {
+        display: -webkit-box;
+        overflow: hidden;
+        color: #777782;
+        font-size: 13px;
+        line-height: 1.4;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .workout-card {
+        height: 420px;
+
+        &__content {
+            padding: 16px 18px;
+        }
+    }
 }
